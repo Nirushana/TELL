@@ -15,12 +15,12 @@ const OTPCodeSender = ({ navigation }) => {
             <Text style={[styles.txtStyle, {fontWeight: 'bold'}]}> by entering the code sent to you </Text>
 
             <View style={styles.inputContainer} >
-                <TextInput style={styles.txtInput} keyboardType='number-pad'/>
-                <TextInput style={styles.txtInput} keyboardType='number-pad'/>
-                <TextInput style={styles.txtInput} keyboardType='number-pad'/>
-                <TextInput style={styles.txtInput} keyboardType='number-pad'/>
-                <TextInput style={styles.txtInput} keyboardType='number-pad'/>
-                <TextInput style={styles.txtInput} keyboardType='number-pad'/>
+                <TextInput style={styles.txtInput} maxLength={1} keyboardType='number-pad'/>
+                <TextInput style={styles.txtInput} maxLength={1} keyboardType='number-pad'/>
+                <TextInput style={styles.txtInput} maxLength={1} keyboardType='number-pad'/>
+                <TextInput style={styles.txtInput} maxLength={1} keyboardType='number-pad'/>
+                <TextInput style={styles.txtInput} maxLength={1} keyboardType='number-pad'/>
+                <TextInput style={styles.txtInput} maxLength={1} keyboardType='number-pad'/>
             </View>
 
             < Pressable style={[styles.btnStyle,{ marginTop: '20%' }]} onPress={()=> navigation.navigate("Profile Screen")} >
@@ -31,6 +31,7 @@ const OTPCodeSender = ({ navigation }) => {
     )
 }
 
+//expo secoure store
 export default OTPCodeSender
 
 const styles = StyleSheet.create({

@@ -14,6 +14,9 @@ import ChangePassword from './src/Auth/ChangePassword';
 import Profile from './src/MainSrc/Profile';
 import EditProfile from './src/MainSrc/EditProfile';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Feeds from './src/MainSrc/Feeds';
+
+
 
 const Stack = createStackNavigator();
 
@@ -47,6 +50,7 @@ export default function App() {
       <Stack.Screen name="OTP Code" component={OTPCodeSender} />
       <Stack.Screen name="Forget Password" component={FPEnterEmail} />
       <Stack.Screen name="Change Password" component={ChangePassword} />
+      <Stack.Screen name="Feeds" component={Feeds} />
       <Stack.Screen name="Profile Screen" component={ProfileScreen} />
       <Stack.Screen name="Edit Profile" component={EditProfileScreen} />
     </Stack.Navigator>
