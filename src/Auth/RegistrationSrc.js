@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { SafeAreaView } from "react-native";
 import { Pressable } from "react-native";
 import { StyleSheet, Text, View, TextInput } from "react-native";
+import api from "../../api";
 
 const RegistrationSrc = ({ navigation }) => {
   const [firstName, setFirstName] = useState("");
@@ -29,6 +30,26 @@ const RegistrationSrc = ({ navigation }) => {
         break;
       default:
         break;
+    }
+  };
+
+  const handleFetch = async () => {
+    try {
+      const body = {
+        firstName,
+        lastName,
+        email,
+        contact,
+        password,
+      };
+      const response = await api.postSignup(body);
+      if (!response) throw new Error("Data not resiv");
+      navigation.replace("OTP Code");
+      alert("hair");
+
+      console.log("Res:", response);
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -110,7 +131,7 @@ const RegistrationSrc = ({ navigation }) => {
 
         <Pressable
           style={[styles.btnStyle, { marginTop: 50 }]}
-          onPress={() => navigation.navigate("Authentication Number")}
+          onPress={handleFetch}
         >
           <Text style={[styles.txtStyle, { fontWeight: "bold" }]}>
             Register

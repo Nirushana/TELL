@@ -8,7 +8,6 @@ import LoginSrc from './src/Auth/LoginSrc';
 import LandingSrc from './src/Auth/LandingSrc';
 import RegistrationSrc from './src/Auth/RegistrationSrc';
 import OTPCodeSender from './src/Auth/OTPCodeSender';
-import AuthNumber from './src/Auth/AuthNumber';
 import FPEnterEmail from './src/Auth/FPEnterEmail';
 import ChangePassword from './src/Auth/ChangePassword';
 import Profile from './src/MainSrc/Profile';
@@ -46,7 +45,6 @@ export default function App() {
       <Stack.Screen name="Landing" component={LandingSrc} options={{headerShown: false}} />
       <Stack.Screen name="Login" component={LoginSrc} />
       <Stack.Screen name="Registration" component={RegistrationSrc} />
-      <Stack.Screen name="Authentication Number" component={AuthNumber} />
       <Stack.Screen name="OTP Code" component={OTPCodeSender} />
       <Stack.Screen name="Forget Password" component={FPEnterEmail} />
       <Stack.Screen name="Change Password" component={ChangePassword} />
